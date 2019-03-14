@@ -8,6 +8,7 @@
 
 #include <string>
 #include <vector>
+//#include "internal/chassis.hh"
 
 namespace autolabor {
 	namespace pm1 {
@@ -113,7 +114,6 @@ namespace autolabor {
 	     */
 		void delay(double time);
 		
-		/** 轮速里程计数据结构 */
 		struct odometry { double x, y, yaw, vx, vy, w; };
 		
 		/**
@@ -122,6 +122,11 @@ namespace autolabor {
 		 * @return 里程计值
 		 */
 		odometry get_odometry();
+		
+		/**
+		 * 电机数据
+		 */
+		//std::vector<motor_t<>> get_motors();
 	}
 }
 
