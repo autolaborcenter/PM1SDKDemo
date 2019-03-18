@@ -110,5 +110,32 @@
     <Image Include="res\about_over.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\test.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\front.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\back.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\left_front.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\right_front.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\left_back.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\right_back.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\turn_inverse.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\turn_clockwise.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
