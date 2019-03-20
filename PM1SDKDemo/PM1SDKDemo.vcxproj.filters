@@ -80,16 +80,10 @@
     <Image Include="res\cross_norm.bmp">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\logo_A.ico">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="res\cross_over.bmp">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\title.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="res\logo_A.bmp">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\line_hit.bmp">
@@ -135,6 +129,27 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\turn_clockwise.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\inst_hit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\inst_norm.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\inst_over.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\real_hit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\real_norm.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\real_over.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo_A.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

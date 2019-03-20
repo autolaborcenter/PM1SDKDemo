@@ -29,11 +29,13 @@ protected:
 	int m_nWidth;
 	int m_nHeight;
 	BOOL m_bTabFocus;
+	bool m_bSelected = false;
 
 public:
 	void LoadBitmaps(int nNormBmpID, int nOverBmpID = 0, int nDownBmpID = 0, int nDisableBmpID = 0);
 	void SetTabFocus();
 	void KillTabFocus();
+	void Select(bool selected);
 };
 
 

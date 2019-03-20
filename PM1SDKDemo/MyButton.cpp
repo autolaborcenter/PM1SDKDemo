@@ -96,13 +96,19 @@ void CMyButton::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 	}
 	else
 	{
-		if (m_bEnter)	// 鼠标位于按钮上
+		if (m_bSelected)	// 选中
+		{
+			DrawBitmap(hDC, m_hBitmapDown);
+		}
+		else if (m_bEnter)	// 鼠标位于按钮上
 		{
 			DrawBitmap(hDC, m_hBitmapOver);
+
 		}
 		else	// 鼠标不在按钮上
 		{
 			DrawBitmap(hDC, m_hBitmapNorm);
+
 		}
 	}
 }
@@ -185,3 +191,8 @@ void CMyButton::KillTabFocus()
 	m_bTabFocus = FALSE;
 }
 
+void CMyButton::Select(bool selected)
+{
+	m_bSelected = selected;
+	this->Invalidate(FALSE);
+}
