@@ -236,11 +236,13 @@
     <Image Include="res\line_norm.bmp" />
     <Image Include="res\line_over.bmp" />
     <Image Include="res\logo_A.ico" />
+    <Image Include="res\pause.bmp" />
     <Image Include="res\real_hit.bmp" />
     <Image Include="res\real_norm.bmp" />
     <Image Include="res\real_over.bmp" />
     <Image Include="res\right_back.bmp" />
     <Image Include="res\right_front.bmp" />
+    <Image Include="res\stop.bmp" />
     <Image Include="res\test.bmp" />
     <Image Include="res\title.bmp" />
     <Image Include="res\turn_clockwise.bmp" />
