@@ -6,26 +6,54 @@
 #define PM1_SDK_API_H
 
 
+#ifdef  _MSC_VER
+#define DllExport __declspec(dllexport)
+#else
+#define DllExport
+#endif // _MSC_VER
+
+
 #include <string>
 #include <vector>
 
 namespace autolabor {
 	namespace pm1 {
+		/** 节点状态 */
+		extern struct chassis_state_t;
+		
 		/** 表示全局指令执行的结果 */
+		template<class t>
 		struct result {
 			uint16_t code;
 			
 			/** 错误信息 */
 			const std::string error_info;
 			
+			t data;
+			
 			/** 判断结果是否是成功的 */
-			explicit operator bool() const;
+			explicit operator bool() const {
+				return error_info.empty();
+			}
+		};
+		
+		template<>
+		struct result<void> {
+			uint16_t code;
+			
+			/** 错误信息 */
+			const std::string error_info;
+			
+			/** 判断结果是否是成功的 */
+			explicit operator bool() const {
+				return error_info.empty();
+			}
 		};
 		
 		/**
 		 * @return 全部串口的名字列表
 		 */
-		std::vector<std::string> serial_ports();
+		DllExport std::vector<std::string> serial_ports();
 		
 		/**
 		 * 初始化
@@ -33,12 +61,12 @@ namespace autolabor {
 		 * @param port 串口名字
 		 * @returns 是否成功
 		 */
-		result initialize(const std::string &port = "");
+		DllExport result<void> initialize(const std::string &port = "");
 		
 		/**
 		 * 关闭
 		 */
-		result shutdown();
+		DllExport result<void> shutdown();
 		
 		/**
 		 * 走直线
@@ -46,7 +74,7 @@ namespace autolabor {
 		 * @param speed    线速度
 		 * @param distance 行驶距离
 		 */
-		result go_straight(double speed, double distance);
+		DllExport result<void> go_straight(double speed, double distance);
 		
 		/**
 		 * 走直线
@@ -54,7 +82,7 @@ namespace autolabor {
 		 * @param speed 线速度
 		 * @param time  行驶时间
 		 */
-		result go_straight_timing(double speed, double time);
+		DllExport result<void> go_straight_timing(double speed, double time);
 		
 		/**
 		 * 走圆弧
@@ -63,7 +91,7 @@ namespace autolabor {
 		 * @param r     转弯半径
 		 * @param rad   行驶时间
 		 */
-		result go_arc(double speed, double r, double rad);
+		DllExport result<void> go_arc(double speed, double r, double rad);
 		
 		/**
 		 * 走圆弧
@@ -72,7 +100,7 @@ namespace autolabor {
 		 * @param r     转弯半径
 		 * @param time  行驶时间
 		 */
-		result go_arc_timing(double speed, double r, double time);
+		DllExport result<void> go_arc_timing(double speed, double r, double time);
 		
 		/**
 		 * 原地转
@@ -80,7 +108,7 @@ namespace autolabor {
 		 * @param speed 角速度
 		 * @param rad   弧度
 		 */
-		result turn_around(double speed, double rad);
+		DllExport result<void> turn_around(double speed, double rad);
 		
 		/**
 		 * 原地转
@@ -88,17 +116,17 @@ namespace autolabor {
 		 * @param speed 角速度
 		 * @param time  时间
 		 */
-		result turn_around_timing(double speed, double time);
+		DllExport result<void> turn_around_timing(double speed, double time);
 		
 		/**
 		 * 暂停执行阻塞控制
 		 */
-		result pause();
+		DllExport result<void> pause();
 		
 		/**
 		 * 恢复执行阻塞控制
 		 */
-		result resume();
+		DllExport result<void> resume();
 		
 		/**
 		 * 控制机器人运行
@@ -106,14 +134,14 @@ namespace autolabor {
 		 * @param v 线速度
 		 * @param w 角速度
 		 */
-		result drive(double v, double w);
+		DllExport result<void> drive(double v, double w);
 		
 		/**
 	     * 延时
 	     *
 	     * @param time 时间
 	     */
-		void delay(double time);
+		DllExport void delay(double time);
 		
 		struct odometry { double x, y, yaw, vx, vy, w; };
 		
@@ -122,27 +150,27 @@ namespace autolabor {
 		 *
 		 * @return 里程计值
 		 */
-		odometry get_odometry();
+		DllExport result<odometry> get_odometry();
 		
 		/**
 		 * 清除里程计累计值
 		 */
-		result reset_odometry();
-		
-		/**
-		 * 检查状态
-		 */
-		result check_state();
+		DllExport result<void> reset_odometry();
 		
 		/**
 		 * 锁定底盘
 		 */
-		result lock();
+		DllExport result<void> lock();
 		
 		/**
 		 * 解锁底盘
 		 */
-		result unlock();
+		DllExport result<void> unlock();
+		
+		/**
+	     * 检查节点状态
+	     */
+		DllExport result<chassis_state_t> get_chassis_state();
 	}
 }
 
