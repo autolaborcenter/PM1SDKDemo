@@ -33,6 +33,7 @@ protected:
 
 public:
 	void LoadBitmaps(int nNormBmpID, int nOverBmpID = 0, int nDownBmpID = 0, int nDisableBmpID = 0);
+	void Move(int x, int y);
 	void SetTabFocus();
 	void KillTabFocus();
 	void Select(bool selected);

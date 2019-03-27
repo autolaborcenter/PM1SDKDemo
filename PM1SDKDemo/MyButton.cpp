@@ -181,6 +181,13 @@ void CMyButton::LoadBitmaps(int nNormBmpID, int nOverBmpID, int nDownBmpID, int 
 	MoveWindow(rect.left-rect1.left, rect.top-rect1.top, m_nWidth, m_nHeight);
 }
 
+void CMyButton::Move(int x, int y)
+{
+	CRect rect;
+	GetWindowRect(rect);
+	MoveWindow(x, y, rect.Width(), rect.Height());
+}
+
 void CMyButton::SetTabFocus()
 {
 	m_bTabFocus = TRUE;

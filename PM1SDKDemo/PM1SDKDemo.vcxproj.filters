@@ -158,5 +158,20 @@
     <Image Include="res\stop.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\unconnect.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\connect.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\lock.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\unlock.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\unknown.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
