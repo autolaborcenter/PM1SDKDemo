@@ -237,6 +237,7 @@
     <Image Include="res\line_norm.bmp" />
     <Image Include="res\line_over.bmp" />
     <Image Include="res\lock.bmp" />
+    <Image Include="res\lock_over.bmp" />
     <Image Include="res\logo_A.ico" />
     <Image Include="res\pause.bmp" />
     <Image Include="res\real_hit.bmp" />
@@ -252,6 +253,7 @@
     <Image Include="res\unconnect.bmp" />
     <Image Include="res\unknown.bmp" />
     <Image Include="res\unlock.bmp" />
+    <Image Include="res\unlock_over.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
