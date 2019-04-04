@@ -104,9 +104,6 @@
     <Image Include="res\about_over.bmp">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\test.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="res\front.bmp">
       <Filter>资源文件</Filter>
     </Image>
