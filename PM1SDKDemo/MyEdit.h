@@ -30,6 +30,7 @@ private:
 
 public:
 	int m_bInputOk = false;
+	void* m_Tag = nullptr;
 
 public:
 	void SetTipText(CString sText);
