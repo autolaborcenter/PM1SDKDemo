@@ -192,6 +192,7 @@
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="MyButton.h" />
     <ClInclude Include="MyEdit.h" />
+    <ClInclude Include="MyProgress.h" />
     <ClInclude Include="PM1SDKDemo.h" />
     <ClInclude Include="PM1SDKDemoDlg.h" />
     <ClInclude Include="pm1_sdk.h" />
@@ -203,6 +204,7 @@
     <ClCompile Include="AboutDlg.cpp" />
     <ClCompile Include="MyButton.cpp" />
     <ClCompile Include="MyEdit.cpp" />
+    <ClCompile Include="MyProgress.cpp" />
     <ClCompile Include="PM1SDKDemo.cpp" />
     <ClCompile Include="PM1SDKDemoDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
