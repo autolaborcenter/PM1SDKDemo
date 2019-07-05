@@ -120,7 +120,7 @@ namespace autolabor {
          * @return 参数默认值
          */
         DLL_EXPORT double
-        get_defualt_parameter(parameter_id id);
+        get_default_parameter(parameter_id id);
         
         /**
          * 获取底盘参数当前值
@@ -377,7 +377,7 @@ namespace autolabor {
          * @param spatium 路程（弧长）
          * @param angle 角度（圆心角）
          */
-        DLL_EXPORT double
+        DLL_EXPORT result<double>
         calculate_spatium(double spatium, double angle);
         
         /**
@@ -392,6 +392,7 @@ namespace autolabor {
         drive_spatial(double v,
                       double w,
                       double s,
+                      double a,
                       double *progress = nullptr);
         
         /**
